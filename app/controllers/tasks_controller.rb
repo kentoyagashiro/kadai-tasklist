@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   
   def index
     if logged_in?
-      @task = current_user.tasks.build  # form_with 用
+      #@task = current_user.tasks.build  # form_with 用
       @pagy, @tasks = pagy(current_user.tasks.order(id: :desc),items: 5) #(Task.all,items: 5)
     end
   end
